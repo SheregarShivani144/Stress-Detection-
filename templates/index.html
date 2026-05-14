@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>AI Stress Detection</title>
+</head>
+<body>
+
+<h1>AI Stress Detection</h1>
+
+<form action="/detect" method="POST" enctype="multipart/form-data">
+
+    <label>Enter Text:</label><br>
+    <textarea name="text" rows="5" cols="50"></textarea><br><br>
+
+    <label>Upload Voice File (.wav):</label><br>
+    <input type="file" name="voice"><br><br>
+
+    <label>Capture Face Image:</label><br>
+    <input type="file" name="face"><br><br>
+
+    <button type="submit">Detect Stress</button>
+
+</form>
+
+</body>
+</html>
